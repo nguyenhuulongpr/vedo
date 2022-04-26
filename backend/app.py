@@ -25,7 +25,7 @@ def image():
         ocr = PaddleOCR(lang="en")
         img_path = 'input.jpeg'
         result = ocr.ocr(img_path)
-        res = "  "
+        res = ""
         # how about this comment?
         for line in result:
             res += (line[1][0] + "\n")
