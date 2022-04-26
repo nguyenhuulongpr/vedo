@@ -18,13 +18,14 @@ def image():
 
     if request.method == 'POST':
         data = request.get_json()
+        # example of an unclear comment
         inputImage = open('input.jpeg', 'wb')
         inputImage.write(base64.b64decode((data)))
         inputImage.close()
         ocr = PaddleOCR(lang="en")
         img_path = 'input.jpeg'
         result = ocr.ocr(img_path)
-        res = ""
+        res = " "
         for line in result:
             res += (line[1][0] + "\n")
         resu = res
