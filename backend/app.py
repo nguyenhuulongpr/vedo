@@ -3,9 +3,6 @@ import cv2
 from flask import Flask, send_file, Response, request, jsonify
 from io import BytesIO
 import base64
-# from flask_cors import CORS, cross_origin
-# import os
-# import sys
 
 app = Flask(__name__)
 # cors = CORS(app)
