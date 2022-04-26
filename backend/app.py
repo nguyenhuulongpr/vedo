@@ -18,7 +18,6 @@ def image():
 
     if request.method == 'POST':
         data = request.get_json()
-        # example of an unclear comment
         inputImage = open('input.jpeg', 'wb')
         inputImage.write(base64.b64decode((data)))
         inputImage.close()
@@ -26,13 +25,10 @@ def image():
         img_path = 'input.jpeg'
         result = ocr.ocr(img_path)
         res = ""
-        # how about this comment?
         for line in result:
             res += (line[1][0] + "\n")
         resu = res
         return resu, 200
-
-# example of CLs
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5000)
