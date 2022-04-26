@@ -26,7 +26,7 @@ def image():
         img_path = 'input.jpeg'
         result = ocr.ocr(img_path)
         res = ""
-        # how about this comment?
+        # a really bad comment
         for line in result:
             res += (line[1][0] + "\n")
         resu = res
