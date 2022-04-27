@@ -7,7 +7,7 @@ import base64
 app = Flask(__name__)
 # cors = CORS(app)
 
-# this is a good comment
+# this is a comment
 @app.route("/image", methods=['GET', 'POST'])
 def image():
     resu = ""
